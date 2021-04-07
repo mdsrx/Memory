@@ -51,17 +51,18 @@ Le côté serveur est géré dans *server.js* et *app.js*
 * Démarrage de la boucle de jeu et définition du *gameState* (état du jeu : 0 correspond au menu, 1 au jeu, 2 à la victoire et 3 à la défaite)
 
 ## Evénements (client)
-Ajout d'un *event listener* sur le canvas pour vérifier les interactions avec celui-ci
+
+Ajout d'un *event listener* sur le canvas pour vérifier les interactions avec celui-ci  
+On vérifie les clics sur le canvas en récupérant les coordonnées de la souris sur la page que l'on compare avec les coordonnées des éléments interactifs du canvas.  
 * Si le joueur est dans le menu, on vérifie les clics sur le bouton Play
 * Si le joueur est en jeu, on vérifie les clics sur les cartes
 * Si le joueur a gagné ou perdu, on vérifie les clics sur le bouton Replay
-On vérifie les clics sur le canvas en récupérant les coordonnées de la souris sur la page que l'on compare avec les coordonnées des éléments intéractifs de la page.
 
 ## En jeu
 
 ### Démarrage du jeu
 
-Lorsque le joueur a cliqué sur le bouton Play ou Replay
+Lorsque le joueur a cliqué sur le bouton Play ou Replay  
 * On définit le plateau de jeu :
   1. On sélectionne les fruits qui vont être dans le plateau de jeu à partir des fruits disponibles dans le tableau créé à l'initialisation de la page
   2. On double le nombre de fruits pour créer des paires et on les mélange de manière aléatoire
@@ -76,9 +77,10 @@ Lorsque le joueur a cliqué sur le bouton Play ou Replay
 
 Lorsque le joueur sélectionne une carte, on va chercher le fruit qui est associé à cette carte et on l'affiche.  
 
-Le joueur doit sélectionner deux cartes. Ces deux cartes sont ensuite comparées :
+Le joueur doit sélectionner deux cartes. Ces deux cartes sont ensuite comparées :  
 * Si les cartes sélectionnées possèdent le même fruit, la paire est validée et reste affichée sur le plateau de jeu
-* Si les cartes sélectionnées ne possèdent pas le même fruit, la paire n'est pas validée. Les fruits sont donc cachés à nouveau.
+* Si les cartes sélectionnées ne possèdent pas le même fruit, la paire n'est pas validée. Les fruits sont donc cachés à nouveau.  
+
 Le joueur doit ensuite continuer à sélectionner deux cartes jusqu'à ce que le nombre de paires maximum soit atteint (le joueur a gagné) ou que le timer soit terminé (le joueur a perdu). La victoire ou la défaite sont vérifiés à chaque frame dans la boucle de gameplay.
 
 ### Le joueur a gagné
