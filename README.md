@@ -69,7 +69,7 @@ Lorsque le joueur a cliqué sur le bouton Play ou Replay
   3. Le plateau récupère ces fruits et créé un objet carte qui stocke le fruit qui lui a été assigné
   4. Le plateau affiche les cartes faces cachées dans le canvas
 * On démarre le timer :
-  1. On commence un interval qui sera appelé chaque seconde pour augmenter le temps actuel et son affichage
+  1. On commence un interval qui sera appelé chaque seconde pour augmenter le temps actuel
   2. On affiche le temps actuel dans le second canvas dédié au timer qui sera appelé chaque 100ms pour fluidifier l'affichage du timer
   3. Le timer se termine lorsque le temps max a été atteint
 
@@ -102,6 +102,6 @@ Si dans le temps imparti, le joueur a trouvé toutes les paires sur le plateau :
 Si le temps imparti a été atteint et que le joueur n'a pas trouvé toutes les paires sur le plateau : le joueur a perdu... 
 * On arrête le timer et son affichage dans le canvas
 * On définit l'état de loose dans le *gameState*
-* On affiche un message de victoire dans le canvas
+* On affiche un message de défaite dans le canvas
 * Le score du joueur ayant perdu la partie n'est pas affiché ni sauvegardé
 * On affiche le bouton Replay dans le canvas
