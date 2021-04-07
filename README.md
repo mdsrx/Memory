@@ -8,6 +8,7 @@ Memory est un mini-jeu réalisé en __HTML__ / __CSS__ / __Javascript__ / __Node
 
 Le joueur doit trouver toutes les paires de cartes identiques réparties aléatoirement sur le plateau de jeu dans le temps imparti.  
 Une fois toutes les paires trouvées, le temps de jeu et les initiales du joueur sont enregistrés dans la base de données.  
+Si le joueur n'a pas trouvé toutes les paires de cartes, c'est la défaite.  
 Il est possible de recommencer une partie une fois la victoire (ou la défaite) atteinte.  
 
 ## Réalisation
