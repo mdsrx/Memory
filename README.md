@@ -13,11 +13,13 @@ Il est possible de recommencer une partie une fois la victoire (ou la défaite) 
 
 ## Réalisation
 
-La partie serveur (back) est gérée en __Node.js__ et __Express__. Pour démarrer le serveur : *npm start*  
+La partie serveur (back) est gérée en __Node.js__ et __Express__.  
+Pour démarrer le serveur : *npm start*  
+Par défaut, la page sera trouvable à l'adresse : http://localhost:3000  
 
 Les événements de la partie sont affichés dans le __canvas__ de la page *index.html*  
 
-La partie client (front) est gérée en __Javascript__ dans le fichier *game.js*. L'affichage des éléments et les événements dans le canvas sont géré intégralement en Javascript.  
+La partie client (front) est gérée en __Javascript__ dans le fichier *game.js*. L'affichage des éléments et les événements dans le canvas sont gérés intégralement en Javascript.  
 
 Le lien entre la partie serveur et la partie client est effectué à l'aide des sockets (__socket.io__)
 
