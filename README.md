@@ -50,6 +50,8 @@ Le côté serveur est géré dans *server.js* et *app.js*
 * Stockage de tous les objets Fruit dans un tableau
 * Démarrage de la boucle de jeu et définition du *gameState* (état du jeu : 0 correspond au menu, 1 au jeu, 2 à la victoire et 3 à la défaite)
 
+![alt text](https://github.com/mdsrx/Memory/blob/main/screenshots/menu.jpg?raw=true)
+
 ## Evénements (client)
 
 Ajout d'un *event listener* sur le canvas pour vérifier les interactions avec celui-ci  
@@ -73,6 +75,8 @@ Lorsque le joueur a cliqué sur le bouton Play ou Replay
   2. On affiche le temps actuel dans le second canvas dédié au timer qui sera appelé chaque 100ms pour fluidifier l'affichage du timer
   3. Le timer se termine lorsque le temps max a été atteint
 
+![alt text](https://github.com/mdsrx/Memory/blob/main/screenshots/ingame1.JPG?raw=true)
+
 ### Au cours de la partie
 
 Lorsque le joueur sélectionne une carte, on va chercher le fruit qui est associé à cette carte et on l'affiche.  
@@ -82,6 +86,8 @@ Le joueur doit sélectionner deux cartes. Ces deux cartes sont ensuite comparée
 * Si les cartes sélectionnées ne possèdent pas le même fruit, la paire n'est pas validée. Les fruits sont donc cachés à nouveau.  
 
 Le joueur doit ensuite continuer à sélectionner deux cartes jusqu'à ce que le nombre de paires maximum soit atteint (le joueur a gagné) ou que le timer soit terminé (le joueur a perdu). La victoire ou la défaite sont vérifiés à chaque frame dans la boucle de gameplay.
+
+![alt text](https://github.com/mdsrx/Memory/blob/main/screenshots/ingame2.jpg?raw=true)
 
 ### Le joueur a gagné
 
@@ -97,6 +103,8 @@ Si dans le temps imparti, le joueur a trouvé toutes les paires sur le plateau :
 * A la réception du socket, le serveur récupère le score et les initiales du joueur et l'insère dans la base de données
 * On affiche le bouton Replay dans le canvas
 
+![alt text](https://github.com/mdsrx/Memory/blob/main/screenshots/win.jpg?raw=true)
+
 ### Le joueur a perdu
 
 Si le temps imparti a été atteint et que le joueur n'a pas trouvé toutes les paires sur le plateau : le joueur a perdu... 
@@ -105,3 +113,5 @@ Si le temps imparti a été atteint et que le joueur n'a pas trouvé toutes les 
 * On affiche un message de défaite dans le canvas
 * Le score du joueur ayant perdu la partie n'est pas affiché ni sauvegardé
 * On affiche le bouton Replay dans le canvas
+
+![alt text](https://github.com/mdsrx/Memory/blob/main/screenshots/loose.jpg?raw=true)
